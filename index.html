@@ -1,1 +1,74 @@
-<h1> Code Snippets </h1>
+<html>
+	<head>
+		<title> Project 12: Code Snippets</title>
+		<link rel="stylesheet" type="text/css" href="project12.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+
+	</head>
+
+
+	<body>
+		<h1> Code Snippets </h1>
+
+		<div>
+			<figure>
+				<figcaption> <h3>FCC Basic Algorithms: Return Largest Number in an Array </h3></figcaption>
+				<pre><code class="language-javascript"> 
+
+		function largestOfFour(arr) {  
+			var newArray = [];   							
+			  
+				for (var i = 0; i < arr.length; i++){ 			
+				 	var largestNumber = 0;   						
+				   	for (var j = 0; j < arr[i].length; j++)  	
+				     	if (arr[i][j] > largestNumber) 			
+				        	largestNumber = arr[i][j]; 				
+				        	newArray.push(largestNumber); 			
+					}
+				return newArray;
+			}
+
+		largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+			</code></pre>
+			</figure>
+		</div>
+
+
+
+		<div>
+			<figure>
+				<figcaption> <h3> Title: Placeholder </h3></figcaption>
+				<pre><code class="language-javascript"> 
+
+		function largestOfFour(arr) {  
+			var newArray = [];   							
+			  
+				for (var i = 0; i < arr.length; i++){ 			
+				 	var largestNumber = 0;   						
+				   	for (var j = 0; j < arr[i].length; j++)  	
+				     	if (arr[i][j] > largestNumber) 			
+				        	largestNumber = arr[i][j]; 				
+				        	newArray.push(largestNumber); 			
+					}
+				return newArray;
+			}
+
+		largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+			</code></pre>
+			</figure>
+		</div>
+		<div></div>
+
+
+		<p> Shout out to <a href="https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/">Tania Rascia</a> for the syntax highlights to these Code Snippets.</p>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+	</body>
+
+
+</html>
+
+
