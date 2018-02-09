@@ -41,20 +41,21 @@
 				<figcaption> <h3> Title: Placeholder </h3></figcaption>
 				<pre><code class="language-javascript"> 
 
-		function largestOfFour(arr) {  
-			var newArray = [];   							
-			  
-				for (var i = 0; i < arr.length; i++){ 			
-				 	var largestNumber = 0;   						
-				   	for (var j = 0; j < arr[i].length; j++)  	
-				     	if (arr[i][j] > largestNumber) 			
-				        	largestNumber = arr[i][j]; 				
-				        	newArray.push(largestNumber); 			
-					}
-				return newArray;
-			}
+		async function sha256(message) {
+    // encode as UTF-8
+    const msgBuffer = new TextEncoder('utf-8').encode(message);                    
 
-		largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+    // hash the message
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+    // convert ArrayBuffer to Array
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+    // convert bytes to hex string                  
+    const hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+    return hashHex;
+}
+
 
 			</code></pre>
 			</figure>
