@@ -38,7 +38,7 @@
 
 		<div>
 			<figure>
-				<figcaption> <h3> Title: Placeholder </h3></figcaption>
+				<figcaption> <h3> Title: Javascript to create Hash Function (sha256) </h3></figcaption>
 				<pre><code class="language-javascript"> 
 
 		async function sha256(message) {
@@ -55,6 +55,36 @@
     const hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
     return hashHex;
 }
+
+
+			</code></pre>
+			</figure>
+		</div>
+		<div></div>
+
+		<div>
+			<figure>
+				<figcaption> <h3> Title: Structure Basic Javascript Test (Adds, Subtracts) </h3></figcaption>
+				<pre><code class="language-javascript"> 
+
+	<script src="../tinytest.js"></script>     //download tinytest.js library
+	<script src="adder.js"></script>			// load adder.js file
+	<script>
+
+			tests({
+			  
+			  'adds numbers': function() {		//function to add numbers
+			  	eq(6, add(2, 4));					//eq checks for equality
+			  	eq(6.6, add(2.6, 4));
+			  },
+
+			  'subtracts numbers': function() {		//function to subtract numbers
+			  	eq(-2, add(2, -4));
+			  	eq(-6.6, add(-2, -4.6));
+			  },
+			});
+	</script>
+
 
 
 			</code></pre>
